@@ -19,6 +19,13 @@ void main() {
     expect(decodeTriviaText('&#65; &#x42;'), 'A B');
   });
 
+  test('decodes typographic quote entities returned by the API', () {
+    expect(
+      decodeTriviaText('Rubik&rsquo;s &ldquo;Cube&rdquo; &shy;'),
+      'Rubik\'s "Cube" \u00AD',
+    );
+  });
+
   test('rejects malformed question data', () {
     expect(
       () => Question.fromJson({'question': 'Missing'}),
