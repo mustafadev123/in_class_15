@@ -23,9 +23,3 @@ explicit classroom simulation. It waits asynchronously and presents the final
 score, but sends no network write and never claims remote persistence. A real
 write requires an instructor-provided endpoint, agreed JSON payload, and UI
 states based on the server's actual response.
-
-## AI-use disclosure
-
-Generative AI was used to assist with project scaffolding, implementation,
-tests, and documentation. The resulting behavior was reviewed and verified
-with Flutter's analyzer and automated test suite.
